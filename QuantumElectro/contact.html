@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumElectro - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">QuantumElectro</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="login.php" class="btn-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-container contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-container">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/myzdpevl" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+        <div id="formStatus" class="status"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 QuantumElectro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      let form = event.target;
+      let statusDiv = document.getElementById("formStatus");
+
+      let formData = new FormData(form);
+
+      try {
+          // 1️⃣ Send to Formspree
+          let response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+          });
+
+          // 2️⃣ Also send to PHP for database storage
+          await fetch("save_contact.php", {
+              method: "POST",
+              body: formData
+          });
+
+          if (response.ok) {
+              statusDiv.textContent = "✅ Message sent successfully!";
+              statusDiv.className = "status success";
+              form.reset();
+          } else {
+              statusDiv.textContent = "❌ Error sending message.";
+              statusDiv.className = "status error";
+          }
+      } catch (error) {
+          statusDiv.textContent = "❌ Network error. Please try later.";
+          statusDiv.className = "status error";
+      }
+  });
+  </script>
+</body>
+</html>
