@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=QuantumElectro&fontAlign=50&fontAlignY=40&color=0:0ea5e9,30:6366f1,70:8b5cf6,100:ec4899&fontColor=ffffff&desc=Vibrant%20E-Commerce%20Experience&descAlign=50&descAlignY=62" alt="QuantumElectro Banner" />
+<img src="public/images/banner.svg" alt="QuantumElectro Banner" width="100%" style="max-width:1100px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.6)"/>
 
 ### A stylish electronics storefront built with HTML, CSS, JavaScript, PHP, and MySQL
 
@@ -30,7 +30,11 @@ Here are a few screenshots from the current project. To include an animated demo
 	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
 </div>
 
-If you'd like an animated demo GIF, add a file at `public/images/demo.gif` and I'll insert it into the README for a live preview.
+If you'd like an animated demo GIF, place `public/images/demo.gif` (I added a placeholder). Replace it with a real GIF and it will show here:
+
+<div align="center">
+	<img src="public/images/demo.gif" alt="Demo GIF placeholder" width="720" style="margin-top:12px;border-radius:8px;" />
+</div>
 
 ## What You Get
 
