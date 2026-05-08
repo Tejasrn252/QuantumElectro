@@ -2,6 +2,18 @@
 
 <img src="public/images/banner.svg" alt="QuantumElectro Banner" width="100%" style="max-width:1100px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.6)"/>
 
+<!-- toc -->
+
+- [Spotlight](#spotlight)
+- [Screenshots & Demo](#screenshots--demo)
+- [Highlights](#highlights)
+- [Quick Start (local)](#quick-start-local)
+- [File map](#file-map)
+- [Roadmap](#roadmap)
+- [Credits](#credits)
+
+<!-- tocstop -->
+
 ### A stylish electronics storefront built with HTML, CSS, JavaScript, PHP, and MySQL
 
 [![Repo Status](https://img.shields.io/badge/Status-Live%20Project-16a34a?style=for-the-badge)](#)
@@ -30,10 +42,10 @@ Here are a few screenshots from the current project. To include an animated demo
 	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
 </div>
 
-If you'd like an animated demo GIF, place `public/images/demo.gif` (I added a placeholder). Replace it with a real GIF and it will show here:
+I added an inline animated SVG demo below — it renders on GitHub and shows a subtle simulated interaction. If you prefer a GIF instead, provide `public/images/demo.gif` and I'll swap it in.
 
 <div align="center">
-	<img src="public/images/demo.gif" alt="Demo GIF placeholder" width="720" style="margin-top:12px;border-radius:8px;" />
+	<object data="public/images/demo.svg" type="image/svg+xml" width="820" height="300">Your browser does not support SVG.</object>
 </div>
 
 ## What You Get
