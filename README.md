@@ -35,14 +35,12 @@ QuantumElectro is not a plain storefront clone. It is designed to feel energetic
 
 ## Screenshots & Demo
 
-Here are a few screenshots from the current project. To include an animated demo, add `demo.gif` to `public/images/` and it will show below.
-
 <div align="center">
 	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Preview" width="600" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
 	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
 </div>
 
-I added an inline animated SVG demo below — it renders on GitHub and shows a subtle simulated interaction. If you prefer a GIF instead, provide `public/images/demo.gif` and I'll swap it in.
+Below is an animated SVG demo showing the product gallery and cart interaction:
 
 <div align="center">
 	<object data="public/images/demo.svg" type="image/svg+xml" width="820" height="300">Your browser does not support SVG.</object>
@@ -60,17 +58,6 @@ A polished multi-page electronics storefront with a gradient-driven UI, PHP auth
 - Playful micro-interactions on hero, cards, and CTAs
 - PHP-powered auth with session handling and password hashing
 - Clean separation: `frontend/`, `backend/`, `public/` for easy deploy
-
----
-
-## Eye Candy (Screenshots)
-
-<div align="center">
-	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="Hero preview" width="720" style="margin:8px;border-radius:10px;" />
-	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Detail preview" width="320" style="margin:8px;border-radius:10px;" />
-</div>
-
-> Want a GIF demo? Add `public/images/demo.gif` and I'll embed it automatically.
 
 ---
 
