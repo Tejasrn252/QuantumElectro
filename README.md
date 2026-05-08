@@ -28,99 +28,98 @@ Here are a few screenshots from the current project. To include an animated demo
 <div align="center">
 	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Preview" width="600" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
 	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
-	<img src="public/images/upi-qr.jpg" alt="UPI QR" width="180" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(236,72,153,0.10)" />
 </div>
 
 If you'd like an animated demo GIF, add a file at `public/images/demo.gif` and I'll insert it into the README for a live preview.
 
 ## What You Get
 
-| Module | Pages and Capabilities |
-|---|---|
-| Store Experience | Home, products grid, product detail pages |
-| User Journey | Register, login, logout, profile, auth checks |
-| Commerce Flow | Cart, order success, order history |
-| Contact Layer | Contact form UI + save endpoint |
-| Platform | PHP backend scripts + MySQL integration |
+<div align="center">
 
-## Visual Language
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=QuantumElectro&fontAlign=50&fontAlignY=40&color=0:0ea5e9,30:6366f1,70:8b5cf6,100:ec4899&fontColor=ffffff&desc=Vibrant%20E-Commerce%20Experience&descAlign=50&descAlignY=62" alt="QuantumElectro Banner" />
 
-- Color direction: indigo, purple, pink with bold contrast accents
-- Depth effects: layered shadows and lift-on-hover cards
-- Motion: subtle transitions for cards, buttons, and key sections
-- Responsive behavior: layouts adapt for desktop and mobile widths
+### The polished electronics storefront — bold colors, smooth motion, real PHP auth
 
-## Stack
+[![Live](https://img.shields.io/badge/Status-Live-16a34a?style=for-the-badge)](#) [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/) [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 
-- Frontend: HTML5, CSS3, JavaScript
-- Backend: PHP
-- Database: MySQL
-- Local environment: XAMPP (Apache + MySQL)
+</div>
 
-## Architecture Snapshot
+---
 
-```mermaid
-flowchart LR
-	A[User Browser] --> B[HTML CSS JS Pages]
-	B --> C[PHP Endpoints]
-	C --> D[(MySQL Database)]
-	C --> E[Session State]
-	B --> F[Cart and Product Views]
-```
+## Why this feels premium
 
-## Core Files
+- Vivid gradient system that reads well on light and dark screens
+- Playful micro-interactions on hero, cards, and CTAs
+- PHP-powered auth with session handling and password hashing
+- Clean separation: `frontend/`, `backend/`, `public/` for easy deploy
 
-```text
-QuantumElectro/
-|- index.html
-|- products.html
-|- cart.html
-|- contact.html
-|- login.php
-|- register.php
-|- profile.php
-|- my-orders.php
-|- order-success.php
-|- db.php
-|- script.js
-|- style.css
-`- images/
-```
+---
 
-## Quick Start
+## Eye Candy (Screenshots)
 
-1. Move the project into your XAMPP htdocs folder.
-2. Start Apache and MySQL from the XAMPP Control Panel.
-3. Create the project database and required tables.
-4. Verify DB credentials in db.php.
-5. Open this URL:
+<div align="center">
+	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="Hero preview" width="720" style="margin:8px;border-radius:10px;" />
+	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Detail preview" width="320" style="margin:8px;border-radius:10px;" />
+</div>
+
+> Want a GIF demo? Add `public/images/demo.gif` and I'll embed it automatically.
+
+---
+
+## Highlights
+
+- Multi-page product experience (no SPA required)
+- Cart flow and order success path
+- Register / login / profile / my-orders pages
+- Contact form connected to `backend/save_contact.php`
+
+---
+
+## Quick Start (local)
+
+1. Copy the project into your XAMPP `htdocs`.
+2. Start Apache + MySQL from the XAMPP control panel.
+3. Create the `quantumelectro` database and import any provided schema.
+4. Update DB credentials in `backend/db.php`.
+5. Visit:
 
 ```text
 http://localhost/QuantumElectro/
 ```
 
-Optional local server mode:
+Optional: run the PHP built-in server from the project root:
 
 ```bash
 php -S 127.0.0.1:8000
 ```
 
-## Security and Reliability
+---
 
-- Password hashing for credentials
-- Validation and sanitization pathways
-- Session-based authentication flow
-- Structured PHP to DB interaction layer
+## File map
+
+```text
+frontend/   # public-facing HTML/CSS/JS
+backend/    # PHP endpoints and auth
+public/     # images and static assets
+index.php   # entry that routes to frontend
+```
+
+---
 
 ## Roadmap
 
-- Payment gateway integration
-- Search and advanced filtering
-- Product ratings and reviews
-- Admin dashboard for inventory/content management
-- API-first backend expansion
+- Payment gateway (Stripe/PayPal)
+- Admin panel + product management
+- Search, filters, and sorting UX
+- Lightweight API wrapper
 
-## Creator
+---
+
+## Credits
+
+Built and designed by Tejasrn252 — reach out with feedback or collaboration ideas.
+
+If you want, I can now generate a demo GIF and a custom banner image and add them to the repo.
 
 Built by Tejasrn252.
 
