@@ -38,15 +38,7 @@ If you'd like an animated demo GIF, place `public/images/demo.gif` (I added a pl
 
 ## What You Get
 
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=QuantumElectro&fontAlign=50&fontAlignY=40&color=0:0ea5e9,30:6366f1,70:8b5cf6,100:ec4899&fontColor=ffffff&desc=Vibrant%20E-Commerce%20Experience&descAlign=50&descAlignY=62" alt="QuantumElectro Banner" />
-
-### The polished electronics storefront — bold colors, smooth motion, real PHP auth
-
-[![Live](https://img.shields.io/badge/Status-Live-16a34a?style=for-the-badge)](#) [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/) [![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-
-</div>
+A polished multi-page electronics storefront with a gradient-driven UI, PHP authentication, and a working cart flow. The repository is organized into `frontend/`, `backend/`, and `public/` to make deployment and maintenance straightforward.
 
 ---
 
@@ -122,9 +114,5 @@ index.php   # entry that routes to frontend
 ## Credits
 
 Built and designed by Tejasrn252 — reach out with feedback or collaboration ideas.
-
-If you want, I can now generate a demo GIF and a custom banner image and add them to the repo.
-
-Built by Tejasrn252.
 
 If this project inspires you, give it a star and share your feedback.
