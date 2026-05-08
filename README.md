@@ -36,8 +36,7 @@ QuantumElectro is not a plain storefront clone. It is designed to feel energetic
 ## Screenshots & Demo
 
 <div align="center">
-	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Preview" width="600" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
-	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
+	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Product Gallery" width="720" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
 </div>
 
 Below is an animated SVG demo showing the product gallery and cart interaction:
