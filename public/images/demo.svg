@@ -1,43 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
   <style>
     .bg{fill:#0f172a}
-    .card{fill:url(#g);rx:12}
-    .pulse{fill:#fff;opacity:0.06}
-    .dot{fill:#fff;opacity:0.9}
-    .title{fill:#fff;font-family:Inter,Segoe UI,Arial;font-weight:700;font-size:28px}
-    .sub{fill:#e6eefb;opacity:0.9;font-size:14px}
-    .rect{fill:#ffffff;opacity:0.06}
-    @keyframes slide {
-      0% { transform: translateX(0);} 
-      50% { transform: translateX(-8px);} 
-      100% { transform: translateX(0);} 
+    .card-bg{fill:#1e293b;rx:12}
+    .gradient-btn{fill:url(#grad)}
+    .text-light{fill:#e6eefb;font-family:Inter,Segoe UI,Arial;font-size:13px}
+    .text-title{fill:#fff;font-family:Inter,Segoe UI,Arial;font-weight:700;font-size:16px}
+    .text-sub{fill:#94a3b8;font-size:12px}
+    .text-price{fill:#6366f1;font-weight:700;font-size:14px}
+    @keyframes float {
+      0%, 100% { transform: translateY(0px);} 
+      50% { transform: translateY(-6px);} 
     }
-    .animate {animation: slide 2.6s ease-in-out infinite}
+    .animate {animation: float 3s ease-in-out infinite}
   </style>
   <defs>
-    <linearGradient id="g" x1="0" x2="1">
+    <linearGradient id="grad" x1="0" x2="1">
       <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="60%" stop-color="#8b5cf6"/>
       <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" class="bg" rx="8"/>
-  <g transform="translate(56,32)" class="animate">
-    <rect width="788" height="256" rx="12" fill="url(#g)" />
-    <g transform="translate(28,24)">
-      <text class="title">QuantumElectro — Demo</text>
-      <text x="0" y="36" class="sub">Hover and interactions simulated — product cards, cart flow</text>
-      <g transform="translate(0,72)">
-        <rect x="0" y="0" width="120" height="80" rx="8" class="rect" />
-        <rect x="140" y="0" width="120" height="80" rx="8" class="rect" />
-        <rect x="280" y="0" width="120" height="80" rx="8" class="rect" />
-        <rect x="420" y="0" width="120" height="80" rx="8" class="rect" />
-        <rect x="560" y="0" width="120" height="80" rx="8" class="rect" />
-      </g>
-      <g transform="translate(0,168)">
-        <rect x="0" y="0" width="520" height="40" rx="8" fill="#ffffff" opacity="0.08"/>
-        <rect x="540" y="0" width="116" height="40" rx="8" fill="#ffffff" opacity="0.14"/>
-      </g>
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <!-- Left Panel: Product Gallery -->
+  <g transform="translate(24,16)">
+    <rect width="340" height="288" rx="12" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="16" y="28" class="text-title">Featured Products</text>
+    
+    <!-- Product Cards Grid -->
+    <g transform="translate(12,44)">
+      <rect width="80" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <circle cx="40" cy="40" r="24" fill="#6366f1" opacity="0.3"/>
+      <text x="40" y="105" class="text-sub" text-anchor="middle">Tablet</text>
+      
+      <rect x="96" width="80" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <circle cx="136" cy="40" r="24" fill="#8b5cf6" opacity="0.3"/>
+      <text x="136" y="105" class="text-sub" text-anchor="middle">Speaker</text>
+      
+      <rect x="192" width="80" height="100" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <circle cx="232" cy="40" r="24" fill="#ec4899" opacity="0.3"/>
+      <text x="232" y="105" class="text-sub" text-anchor="middle">Headset</text>
+    </g>
+    
+    <!-- Add to Cart Button -->
+    <g transform="translate(12,160)" class="animate">
+      <rect width="316" height="44" rx="8" class="gradient-btn"/>
+      <text x="158" y="30" class="text-light" text-anchor="middle" font-weight="600">Add to Cart →</text>
+    </g>
+    
+    <text x="16" y="228" class="text-sub">✓ 500+ Electronics</text>
+    <text x="16" y="248" class="text-sub">✓ Free Shipping</text>
+    <text x="16" y="268" class="text-sub">✓ 30-Day Returns</text>
+  </g>
+  
+  <!-- Right Panel: Cart & Checkout -->
+  <g transform="translate(536,16)">
+    <rect width="340" height="288" rx="12" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+    <text x="16" y="28" class="text-title">Your Cart</text>
+    
+    <!-- Cart Items -->
+    <g transform="translate(12,48)">
+      <rect width="316" height="56" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <circle cx="24" cy="28" r="16" fill="#6366f1" opacity="0.4"/>
+      <text x="48" y="20" class="text-light">Premium Tablet</text>
+      <text x="48" y="38" class="text-sub">$299.99</text>
+      <text x="280" y="28" class="text-light" text-anchor="end" font-weight="600">×1</text>
+      
+      <rect y="68" width="316" height="56" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+      <circle cx="24" cy="96" r="16" fill="#8b5cf6" opacity="0.4"/>
+      <text x="48" y="88" class="text-light">Wireless Speaker</text>
+      <text x="48" y="106" class="text-sub">$79.99</text>
+      <text x="280" y="96" class="text-light" text-anchor="end" font-weight="600">×2</text>
+    </g>
+    
+    <!-- Pricing Summary -->
+    <g transform="translate(12,188)">
+      <line x1="0" y1="0" x2="316" y2="0" stroke="#475569" stroke-width="1"/>
+      <text x="0" y="20" class="text-sub">Subtotal</text>
+      <text x="316" y="20" class="text-light" text-anchor="end">$459.97</text>
+      
+      <text x="0" y="44" class="text-sub">Shipping</text>
+      <text x="316" y="44" class="text-light" text-anchor="end" fill="#10b981">FREE</text>
+      
+      <line x1="0" y1="56" x2="316" y2="56" stroke="#475569" stroke-width="1"/>
+      <text x="0" y="76" class="text-title">Total</text>
+      <text x="316" y="76" class="text-title" text-anchor="end" fill="#6366f1">$459.97</text>
+    </g>
+    
+    <!-- Checkout Button -->
+    <g transform="translate(12,248)">
+      <rect width="316" height="44" rx="8" class="gradient-btn"/>
+      <text x="158" y="30" class="text-light" text-anchor="middle" font-weight="600">Proceed to Checkout</text>
     </g>
   </g>
 </svg>
