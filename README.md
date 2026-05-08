@@ -42,7 +42,7 @@ QuantumElectro is not a plain storefront clone. It is designed to feel energetic
 Below is an animated SVG demo showing the product gallery and cart interaction:
 
 <div align="center">
-	<object data="public/images/demo.svg" type="image/svg+xml" width="820" height="300">Your browser does not support SVG.</object>
+	<img src="public/images/demo.svg" alt="QuantumElectro Interactive Demo" width="820" height="300" style="border-radius:8px;box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
 </div>
 
 ## What You Get
