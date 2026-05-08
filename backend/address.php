@@ -1,9 +1,9 @@
 <?php
 session_start(); // Start session if needed for authentication
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: ../backend/login.php');
     exit();
 }
 
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['order_success_time'] = date('Y-m-d H:i:s');
         $_SESSION['order_success_status'] = $status;
         $_SESSION['order_success_increment_badge'] = true;
-        header('Location: order-success.php');
+        header('Location: ../backend/order-success.php');
         exit();
     } else {
         echo "Error: " . $stmt->error;
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuantumElectro - Checkout</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../frontend/style.css">
 </head>
 <body>
     <header class="header">
@@ -55,15 +55,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1 class="logo">QuantumElectro</h1>
             <nav class="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../frontend/index.html">Home</a></li>
+                    <li><a href="../frontend/products.html">Products</a></li>
+                    <li><a href="../frontend/cart.html">Cart</a></li>
+                    <li><a href="../frontend/contact.html">Contact</a></li>
                     <?php if (isset($_SESSION['user_id'])): ?>
-                        <li><a href="profile.php">Hi, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Profile'); ?></a></li>
-                        <li><a href="logout.php" class="btn-login">Logout</a></li>
+                        <li><a href="../backend/profile.php">Hi, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Profile'); ?></a></li>
+                        <li><a href="../backend/logout.php" class="btn-login">Logout</a></li>
                     <?php else: ?>
-                        <li><a href="login.php" class="btn-login">Login</a></li>
+                        <li><a href="../backend/login.php" class="btn-login">Login</a></li>
                     <?php endif; ?>
                 </ul>
             </nav>
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h3>Payment</h3>
                     <p>Scan this UPI QR code and then enter your UTR below.</p>
                     <div class="upi-qr-wrap">
-                        <img src="images/upi-qr.jpg" alt="UPI QR Code" class="upi-qr-img">
+                        <img src="../public/images/upi-qr.jpg" alt="UPI QR Code" class="upi-qr-img">
                     </div>
                 </div>
 
@@ -130,6 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         document.getElementById("total-input").value = localStorage.getItem("quantumElectroTotal") || "0";
 
     </script>
-    <script src="script.js"></script>
+    <script src="../frontend/script.js"></script>
 </body>
 </html>
+

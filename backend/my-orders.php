@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: ../backend/login.php');
     exit();
 }
 
@@ -29,7 +29,7 @@ $stmt->close();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Orders - QuantumElectro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../frontend/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -38,11 +38,11 @@ $stmt->close();
       <h1 class="logo">QuantumElectro</h1>
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="../frontend/index.html">Home</a></li>
+          <li><a href="../frontend/products.html">Products</a></li>
           <li><a href="my-orders.php" class="active">My Orders</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="profile.php" class="btn-login">Profile</a></li>
+          <li><a href="../frontend/contact.html">Contact</a></li>
+          <li><a href="../backend/profile.php" class="btn-login">Profile</a></li>
         </ul>
       </nav>
     </div>
@@ -87,6 +87,7 @@ $stmt->close();
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="../frontend/script.js"></script>
 </body>
 </html>
+

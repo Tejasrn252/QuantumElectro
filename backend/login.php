@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'];
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - QuantumElectro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../frontend/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,10 +44,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <h1 class="logo">QuantumElectro</h1>
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="register.php">Register</a></li>
+          <li><a href="../frontend/index.html">Home</a></li>
+          <li><a href="../frontend/products.html">Products</a></li>
+          <li><a href="../frontend/contact.html">Contact</a></li>
+          <li><a href="../backend/register.php">Register</a></li>
         </ul>
       </nav>
     </div>
@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <button type="submit">🚀 Login Now</button>
         </form>
 
-        <p>Don't have an account? <a href="register.php">Create one here →</a></p>
+        <p>Don't have an account? <a href="../backend/register.php">Create one here →</a></p>
       </div>
     </div>
   </main>
@@ -81,6 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
   </footer>
   
-  <script src="script.js"></script>
+  <script src="../frontend/script.js"></script>
 </body>
 </html>
+

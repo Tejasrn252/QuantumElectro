@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutBtn.addEventListener('click', async () => {
             if (cart.length > 0) {
                 try {
-                    const response = await fetch('auth_status.php', {
+                    const response = await fetch('../backend/auth_status.php', {
                         method: 'GET',
                         credentials: 'same-origin'
                     });
@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Store total price in localStorage
                         localStorage.setItem("quantumElectroTotal", getTotalAmount());
                         // Redirect to address page
-                        window.location.href = "address.php";
+                        window.location.href = "../backend/address.php";
                     } else {
                         alert('Please login before placing an order.');
-                        window.location.href = 'login.php';
+                        window.location.href = '../backend/login.php';
                     }
                 } catch (_error) {
                     alert('Please login before placing an order.');
-                    window.location.href = 'login.php';
+                    window.location.href = '../backend/login.php';
                 }
             } else {
                 alert('Your cart is empty!');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('qeOrderCelebrate');
         }
 
-        fetch('auth_status.php', {
+        fetch('../backend/auth_status.php', {
             method: 'GET',
             credentials: 'same-origin'
         })
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchOrderCount() {
         try {
-            const response = await fetch('orders_count.php', {
+            const response = await fetch('../backend/orders_count.php', {
                 method: 'GET',
                 credentials: 'same-origin'
             });
@@ -336,3 +336,4 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/'/g, '&#39;');
     }
 });
+

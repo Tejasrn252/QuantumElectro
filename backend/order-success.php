@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['order_success_name'])) {
-    header('Location: products.html');
+    header('Location: ../frontend/products.html');
     exit();
 }
 
@@ -26,7 +26,7 @@ unset($_SESSION['order_success_increment_badge']);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Success - QuantumElectro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../frontend/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -35,10 +35,10 @@ unset($_SESSION['order_success_increment_badge']);
       <h1 class="logo">QuantumElectro</h1>
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="profile.php">Hi, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Profile'); ?></a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../frontend/index.html">Home</a></li>
+          <li><a href="../frontend/products.html">Products</a></li>
+          <li><a href="../backend/profile.php">Hi, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Profile'); ?></a></li>
+          <li><a href="../frontend/contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -88,9 +88,9 @@ unset($_SESSION['order_success_increment_badge']);
         </div>
 
         <div class="order-actions">
-          <a href="products.html" class="btn-primary">Continue Shopping</a>
+          <a href="../frontend/products.html" class="btn-primary">Continue Shopping</a>
           <a href="my-orders.php" class="btn-primary">My Orders</a>
-          <a href="profile.php" class="btn-submit">Go To Profile</a>
+          <a href="../backend/profile.php" class="btn-submit">Go To Profile</a>
         </div>
       </section>
     </div>
@@ -114,6 +114,7 @@ unset($_SESSION['order_success_increment_badge']);
     localStorage.removeItem('quantumElectroCart');
     localStorage.removeItem('quantumElectroTotal');
   </script>
-  <script src="script.js"></script>
+  <script src="../frontend/script.js"></script>
 </body>
 </html>
+

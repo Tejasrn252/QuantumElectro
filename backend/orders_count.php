@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 
 $user_id = $_SESSION['user_id'];
 $count = 0;
@@ -29,3 +29,4 @@ echo json_encode([
     'count' => (int)$count
 ]);
 ?>
+

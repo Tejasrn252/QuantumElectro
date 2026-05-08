@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once('db.php');
+require_once(dirname(__FILE__) . '/db.php');
 
 if(!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
+    header('Location: ../backend/login.php');
     exit();
 }
 
@@ -26,7 +26,7 @@ $_SESSION['phone'] = $phone;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile - QuantumElectro</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../frontend/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -35,12 +35,12 @@ $_SESSION['phone'] = $phone;
       <h1 class="logo">QuantumElectro</h1>
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="../frontend/index.html">Home</a></li>
+          <li><a href="../frontend/products.html">Products</a></li>
           <li><a href="my-orders.php">My Orders</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="profile.php" class="active">Profile</a></li>
-          <li><a href="logout.php" class="btn-login">Logout</a></li>
+          <li><a href="../frontend/contact.html">Contact</a></li>
+          <li><a href="../backend/profile.php" class="active">Profile</a></li>
+          <li><a href="../backend/logout.php" class="btn-login">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -73,8 +73,8 @@ $_SESSION['phone'] = $phone;
 
         <div class="profile-actions">
           <a href="my-orders.php" class="btn-primary">My Orders</a>
-          <a href="products.html" class="btn-primary">Continue Shopping</a>
-          <a href="logout.php" class="btn-logout">Logout</a>
+          <a href="../frontend/products.html" class="btn-primary">Continue Shopping</a>
+          <a href="../backend/logout.php" class="btn-logout">Logout</a>
         </div>
       </div>
     </div>
@@ -85,6 +85,7 @@ $_SESSION['phone'] = $phone;
       <p>© 2025 QuantumElectro. All rights reserved.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="../frontend/script.js"></script>
 </body>
 </html>
+
