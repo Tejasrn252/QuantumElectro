@@ -21,11 +21,17 @@ QuantumElectro is not a plain storefront clone. It is designed to feel energetic
 - Database-backed forms and account actions
 - Multi-page catalog structure for products and details
 
-## Preview
+## Screenshots & Demo
+
+Here are a few screenshots from the current project. To include an animated demo, add `demo.gif` to `public/images/` and it will show below.
 
 <div align="center">
-	<img src="images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Preview" width="860" />
+	<img src="public/images/Screenshot%202025-03-18%20164453.png" alt="QuantumElectro Preview" width="600" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(99,102,241,0.18)" />
+	<img src="public/images/WhatsApp%20Image%202025-03-18%20at%2017.25.34_d9340a53.jpg" alt="Preview 2" width="260" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(139,92,246,0.12)" />
+	<img src="public/images/upi-qr.jpg" alt="UPI QR" width="180" style="margin:8px; border-radius:8px; box-shadow:0 8px 30px rgba(236,72,153,0.10)" />
 </div>
+
+If you'd like an animated demo GIF, add a file at `public/images/demo.gif` and I'll insert it into the README for a live preview.
 
 ## What You Get
 
